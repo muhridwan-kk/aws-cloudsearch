@@ -27,6 +27,9 @@
 	            'SortEnabled' => true
 	        )    	
 	    ),
+	));
+	$result = $cSearchClient->defineIndexField(array(
+    	'DomainName' => $CLOUDSEARCH_DOMAIN,
     	'IndexField' => array(
     		'IndexFieldName'=>'body',
     		'IndexFieldType'=>'literal-array',
@@ -36,6 +39,9 @@
 	            'ReturnEnabled' => true
         	)
     	),
+	));
+	$result = $cSearchClient->defineIndexField(array(
+    	'DomainName' => $CLOUDSEARCH_DOMAIN,
     	'IndexField' => array(
     		'IndexFieldName'=>'brand',
     		'IndexFieldType'=>'text',
@@ -43,9 +49,12 @@
 	            'ReturnEnabled' => true,
 	            'SortEnabled' => true,
 	            'HighlightEnabled' => true,
-	            'AnalysisScheme' => 'English',
+	            'AnalysisScheme' => 'English'
 	        )    	
 	    ),
+	));
+	$result = $cSearchClient->defineIndexField(array(
+    	'DomainName' => $CLOUDSEARCH_DOMAIN,
     	'IndexField' => array(
     		'IndexFieldName'=>'color',
     		'IndexFieldType'=>'int',
@@ -53,9 +62,12 @@
 	            'FacetEnabled' => true,
 	            'SearchEnabled' => true,
 	            'ReturnEnabled' => true,
-	            'SortEnabled' => true,
+	            'SortEnabled' => true
 	        )
 	    ),
+	));
+	$result = $cSearchClient->defineIndexField(array(
+    	'DomainName' => $CLOUDSEARCH_DOMAIN,
     	'IndexField' => array(
     		'IndexFieldName'=>'condition',
     		'IndexFieldType'=>'int',
@@ -63,9 +75,12 @@
 	            'FacetEnabled' => true,
 	            'SearchEnabled' => true,
 	            'ReturnEnabled' => true,
-	            'SortEnabled' => true,
+	            'SortEnabled' => true
 	        )
 	    ),
+	));
+	$result = $cSearchClient->defineIndexField(array(
+    	'DomainName' => $CLOUDSEARCH_DOMAIN,
     	'IndexField' => array(
     		'IndexFieldName'=>'created_date',
     		'IndexFieldType'=>'date',
@@ -76,6 +91,9 @@
 	            'SortEnabled' => true
 	        )
 	    ),
+	));
+	$result = $cSearchClient->defineIndexField(array(
+    	'DomainName' => $CLOUDSEARCH_DOMAIN,
     	'IndexField' => array(
     		'IndexFieldName'=>'group',
     		'IndexFieldType'=>'text',
@@ -86,16 +104,22 @@
 	            'AnalysisScheme' => 'English'
 	        )    	
 	    ),
+	));
+	$result = $cSearchClient->defineIndexField(array(
+    	'DomainName' => $CLOUDSEARCH_DOMAIN,
     	'IndexField' => array(
     		'IndexFieldName'=>'item_price',
-    		'IndexFieldType'=>'double',
-	        'DoubleOptions' => array(
+    		'IndexFieldType'=>'int',
+	        'IntOptions' => array(
 	            'FacetEnabled' => true,
 	            'SearchEnabled' => true,
 	            'ReturnEnabled' => true,
 	            'SortEnabled' => true
 	        )    	
 	    ),
+	));
+	$result = $cSearchClient->defineIndexField(array(
+    	'DomainName' => $CLOUDSEARCH_DOMAIN,
     	'IndexField' => array(
     		'IndexFieldName'=>'location',
     		'IndexFieldType'=>'text',
@@ -106,6 +130,9 @@
 	            'AnalysisScheme' => 'Indonesia'
 	        )    	
 	    ),
+	));
+	$result = $cSearchClient->defineIndexField(array(
+    	'DomainName' => $CLOUDSEARCH_DOMAIN,
     	'IndexField' => array(
     		'IndexFieldName'=>'milage',
     		'IndexFieldType'=>'int',
@@ -116,6 +143,9 @@
 	            'SortEnabled' => true
 	        )    	
 	    ),
+	));
+	$result = $cSearchClient->defineIndexField(array(
+    	'DomainName' => $CLOUDSEARCH_DOMAIN,
     	'IndexField' => array(
     		'IndexFieldName'=>'title',
     		'IndexFieldType'=>'text',
@@ -126,6 +156,9 @@
 	            'AnalysisScheme' => 'Indonesia'
 	        )    	
 	    ),
+	));
+	$result = $cSearchClient->defineIndexField(array(
+    	'DomainName' => $CLOUDSEARCH_DOMAIN,
     	'IndexField' => array(
     		'IndexFieldName'=>'year',
     		'IndexFieldType'=>'int',
@@ -136,6 +169,9 @@
 	            'SortEnabled' => true
 	        )    	
 	    ),
+	));
+	$result = $cSearchClient->defineIndexField(array(
+    	'DomainName' => $CLOUDSEARCH_DOMAIN,
     	'IndexField' => array(
     		'IndexFieldName'=>'transmission',
     		'IndexFieldType'=>'int',
