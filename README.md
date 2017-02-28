@@ -6,9 +6,10 @@
   1. Domain and Index creation
     * `cs-delete-domain.php`, be careful, it will delete entire index
     * `cs-create-domain.php`
+    * `cs-describe-domain.php`
     * `cs-create-index.php`
     * `cs-describe-index.php`
-    * `cs-upload.php`
   2. Index querying
+    * `cs-upload.php`
     * `cs-search.php`
     * `cs-search2.php` --> faceting

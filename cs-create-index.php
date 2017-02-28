@@ -16,7 +16,9 @@
 		'version' => 'latest'
 	]);
 
+
     echo "create index in domain ".$CLOUDSEARCH_DOMAIN."\r\n";
+
 	$result = $cSearchClient->defineIndexField(array(
     	'DomainName' => $CLOUDSEARCH_DOMAIN,
     	'IndexField' => array(
@@ -40,6 +42,7 @@
         	)
     	),
 	));
+
 	$result = $cSearchClient->defineIndexField(array(
     	'DomainName' => $CLOUDSEARCH_DOMAIN,
     	'IndexField' => array(
@@ -49,10 +52,11 @@
 	            'ReturnEnabled' => true,
 	            'SortEnabled' => true,
 	            'HighlightEnabled' => true,
-	            'AnalysisScheme' => 'English'
+	            'AnalysisScheme' => '_en_default_'
 	        )    	
 	    ),
 	));
+
 	$result = $cSearchClient->defineIndexField(array(
     	'DomainName' => $CLOUDSEARCH_DOMAIN,
     	'IndexField' => array(
@@ -84,7 +88,7 @@
     	'IndexField' => array(
     		'IndexFieldName'=>'created_date',
     		'IndexFieldType'=>'date',
-	        'IntOptions' => array(
+	        'DateOptions' => array(
 	            'FacetEnabled' => false,
 	            'SearchEnabled' => true,
 	            'ReturnEnabled' => true,
@@ -101,7 +105,7 @@
 	            'ReturnEnabled' => true,
 	            'SortEnabled' => true,
 	            'HighlightEnabled' => true,
-	            'AnalysisScheme' => 'English'
+	            'AnalysisScheme' => '_en_default_'
 	        )    	
 	    ),
 	));
@@ -118,6 +122,7 @@
 	        )    	
 	    ),
 	));
+
 	$result = $cSearchClient->defineIndexField(array(
     	'DomainName' => $CLOUDSEARCH_DOMAIN,
     	'IndexField' => array(
@@ -127,10 +132,11 @@
 	            'ReturnEnabled' => true,
 	            'SortEnabled' => true,
 	            'HighlightEnabled' => true,
-	            'AnalysisScheme' => 'Indonesia'
+	            'AnalysisScheme' => '_id_default_'
 	        )    	
 	    ),
 	));
+
 	$result = $cSearchClient->defineIndexField(array(
     	'DomainName' => $CLOUDSEARCH_DOMAIN,
     	'IndexField' => array(
@@ -153,7 +159,7 @@
 	            'ReturnEnabled' => true,
 	            'SortEnabled' => true,
 	            'HighlightEnabled' => true,
-	            'AnalysisScheme' => 'Indonesia'
+	            'AnalysisScheme' => '_id_default_'
 	        )    	
 	    ),
 	));
@@ -185,3 +191,9 @@
 	));
 	// print it
 	echo $result;
+	echo "Reindexing\r\n";
+	$result = $cSearchClient->indexDocuments(array(
+    	'DomainName' => $CLOUDSEARCH_DOMAIN
+	));
+	echo $result;
+
