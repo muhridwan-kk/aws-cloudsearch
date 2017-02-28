@@ -13,3 +13,10 @@
     * `cs-upload.php`
     * `cs-search.php`
     * `cs-search2.php` --> faceting
+
+
+Resource
+
+1. http://docs.aws.amazon.com/cloudsearch/latest/developerguide/what-is-cloudsearch.html
+2. http://docs.aws.amazon.com/aws-sdk-php/v2/api/namespace-Aws.CloudSearch.html
+3. http://docs.aws.amazon.com/aws-sdk-php/v2/api/namespace-Aws.CloudSearchDomain.html
